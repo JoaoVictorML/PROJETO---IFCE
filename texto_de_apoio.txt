@@ -1,0 +1,24 @@
+projeto_web/
+├── app.py                  # Ponto de entrada principal (cria a app Flask)
+├── config.py               # Configurações (DB, Secret Keys)
+├── requirements.txt        # Dependências Python
+├── instance/               # Dados sensíveis (ex: banco SQLite local)
+│   └── app.db
+├── models/                 # Modelos SQLAlchemy
+│   ├── _init_.py
+│   └── user.py
+├── routes/                 # Endpoints (Blueprints)
+│   ├── _init_.py
+│   ├── api.py              # Rotas JSON (API)
+│   └── views.py            # Rotas HTML (Templates)
+├── static/                 # Arquivos estáticos servidos pelo Flask
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+├── templates/              # Templates Jinja2 (HTML)
+│   ├── base.html
+│   ├── index.html
+│   └── components/
+└── tests/                  # Testes
