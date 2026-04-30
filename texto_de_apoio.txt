@@ -21,4 +21,23 @@ projeto_web/
 │   ├── base.html
 │   ├── index.html
 │   └── components/
-└── tests/                  # Testes
+└── tests/                  # Testes AAA (Arrange, Act, Assert)
+    ├── conftest.py          # Configurações e "fixtures" (o coração dos testes)
+    ├── test_models.py       # Testes de unidade (testa o banco de dados)
+    └── test_routes.py       # Testes de integração (testa se as páginas carregam)
+
+
+        GIT-HUB (COMANDOS)
+    COMO MANDAR OS ARQUIVOS PARA O REPOSITORIO EXISTENTE (CMD/BASH)
+0 - cd c:/caminho_para_a_sua_pasta
+1 - git init
+2 - git add .
+3 - git commit -m "Meu primeiro commit"
+4 - git branch -M main
+5 - git remote add origin https://github.com/SEU_USUARIO/NOME_DO_REPERTORIO.git
+6 - git push -u origin main
+
+    COMO CLONAR UM REPOSITORIO EXISTENTE NA SUA MAQUINA
+0 - cd c:/caminho_para_a_sua_pasta
+1 - git init
+2 - git clone github.com/USUARIO/NOME_DO_REPERTORIO.git
