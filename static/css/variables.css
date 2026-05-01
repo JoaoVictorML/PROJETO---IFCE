@@ -1,0 +1,22 @@
+/* Cores Padrão (Tema Claro - Baseado na Opção 1) */
+:root {
+  --primary: #0066FF;      /* Azul Vibrante */
+  --secondary: #E5F0FF;    /* Azul Pastel */
+  --accent: #FF6B00;       /* Laranja Destaque */
+  --bg-page: #FFFFFF;      /* Fundo Branco */
+  --bg-card: #F8F9FA;      /* Fundo de seções/cards */
+  --text-main: #1A1A1B;    /* Texto Escuro */
+  --text-muted: #6C757D;   /* Texto secundário/cinza */
+}
+
+/* Cores para Tema Escuro (Baseado na Opção 2) */
+/* Você pode ativar isso adicionando class="dark-mode" no seu <body> */
+body.dark-mode {
+  --primary: #3385FF;      /* Um azul um pouco mais claro para contraste */
+  --secondary: #252526;    /* Azul muito escuro/cinza */
+  --accent: #BB86FC;       /* Roxo Neon (da sua Opção 2) */
+  --bg-page: #121212;      /* Fundo Preto */
+  --bg-card: #1E1E1E;      /* Cards Cinza Escuro */
+  --text-main: #FFFFFF;    /* Texto Branco */
+  --text-muted: #A0A0A0;   /* Texto cinza claro */
+}

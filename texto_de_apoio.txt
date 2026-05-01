@@ -41,3 +41,25 @@ projeto_web/
 0 - cd c:/caminho_para_a_sua_pasta
 1 - git init
 2 - git clone github.com/USUARIO/NOME_DO_REPERTORIO.git
+
+
+
+
+=====================================================================================================
+      GUIA DE INTEGRAÇÃO DE LINGUAGENS NO PROJETO (FLASK)
+=====================================================================================================
+
+| Linguagem      | Papel no seu Projeto                                  | Dificuldade de Integração |
+|----------------|-------------------------------------------------------|---------------------------|
+| Python (Flask) | O Maestro: Gerencia rotas, banco de dados e lógica.   | Já está funcionando!      |
+| JavaScript     | O Ator: Cuida do que o usuário vê e clica na tela.    | Nativa do navegador.      |
+| C / C++        | O Especialista: Faz cálculos pesados (Performance).   | Média (Requer ctypes).    |
+| Ruby / PHP     | O Vizinho: Roda em outro servidor (via API).          | Alta (Comunicação externa)|
+
+--------------------------------------------------------------------
+NOTAS DE DESENVOLVIMENTO:
+- Python é a base do Backend neste projeto.
+- JavaScript deve ser usado na pasta /static/js para interatividade.
+- C/C++ pode ser integrado futuramente se houver processamento pesado.
+- Evite misturar Ruby/PHP no mesmo diretório para não gerar conflitos.
+====================================================================

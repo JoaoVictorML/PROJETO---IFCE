@@ -1,0 +1,114 @@
+/* 1. Importando as variáveis da Opção 1 */
+@import url('variables.css');
+
+/* 2. Reset e Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* 3. Container Principal (Sticky Footer Pattern) */
+.principal-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o rodapé fique embaixo mesmo com pouco conteúdo */
+}
+
+/* 4. Cabeçalho e Navegação */
+.header-container {
+  width: 100%;
+}
+
+.top-header {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-bar {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* 5. Área de Conteúdo (A mágica da responsividade acontece aqui) */
+.principal-content-container {
+  display: flex;
+  flex-direction: row; /* Lado a lado no desktop */
+  flex: 1;            /* Ocupa o espaço vertical disponível */
+  width: 100%;
+  max-width: 1400px;  /* Não deixa o site esticar demais em telas ultra-wide */
+  margin: 0 auto;
+  gap: 10px;          /* Espaço entre as colunas */
+  padding: 15px;
+}
+
+.principal-content {
+  background-color: var(--bg-card);
+  flex: 3;            /* O conteúdo principal é 3x maior que a lateral */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.secundary-content-container {
+  flex: 1;            /* Coluna lateral */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.secundary-content {
+  background-color: var(--accent);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tertiary-content {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+/* 6. Rodapé */
+.footer-container {
+  margin-top: auto;   /* Empurra o rodapé para o fim do flex container */
+}
+
+.footer {
+  background-color: #1A1A1B;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 7. Media Query para Celulares e Tablets */
+@media (max-width: 768px) {
+  .principal-content-container {
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    padding: 10px;
+  }
+
+  .principal-content, 
+  .secundary-content-container {
+    width: 100%; /* Ocupa a largura total da tela */
+  }
+
+  .top-header, .nav-bar {
+    height: auto; /* Ajusta a altura conforme o conteúdo no mobile */
+    padding: 15px;
+  }
+}
