@@ -1,5 +1,5 @@
 /* 1. Importando as variáveis da Opção 1 */
-@import url('variables.css');
+@import url("variables.css");
 
 /* 2. Reset e Configurações Globais */
 * {
@@ -11,7 +11,7 @@
 body {
   background-color: var(--bg-page);
   color: var(--text-main);
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
 
@@ -25,44 +25,53 @@ body {
 /* 4. Cabeçalho e Navegação */
 .header-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .top-header {
   background-color: var(--primary);
-  color: #FFFFFF;
-  padding: 20px;
-  text-align: center;
+  color: #ffffff;
+  padding: 0 20px; /* Removido o padding vertical para não somar com a altura fixa */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ISSO: Centraliza a logo verticalmente nos 80px */
+  height: 80px;
+}
+
+/* Adicione esta regra para controlar a logo especificamente */
+.top-header img {
+  height: 150px; /* Define um tamanho fixo para a logo */
+  width: auto; /* Mantém a proporção */
+  display: block; /* Remove espaços fantasmas abaixo da imagem */
 }
 
 .nav-bar {
   background-color: var(--secondary);
   color: var(--primary);
   padding: 10px 20px;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* 5. Área de Conteúdo (A mágica da responsividade acontece aqui) */
+/* No item 5 do seu CSS, remova estas linhas: */
 .principal-content-container {
   display: flex;
-  flex-direction: row; /* Lado a lado no desktop */
-  flex: 1;            /* Ocupa o espaço vertical disponível */
+  flex-direction: row;
   width: 100%;
-  max-width: 1400px;  /* Não deixa o site esticar demais em telas ultra-wide */
+  max-width: 1400px;
   margin: 0 auto;
-  gap: 10px;          /* Espaço entre as colunas */
   padding: 15px;
 }
 
 .principal-content {
+  /* flex: 3; <-- REMOVA */
   background-color: var(--bg-card);
-  flex: 3;            /* O conteúdo principal é 3x maior que a lateral */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .secundary-content-container {
-  flex: 1;            /* Coluna lateral */
+  /* flex: 1; <-- REMOVA */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -85,11 +94,11 @@ body {
 
 /* 6. Rodapé */
 .footer-container {
-  margin-top: auto;   /* Empurra o rodapé para o fim do flex container */
+  margin-top: auto; /* Empurra o rodapé para o fim do flex container */
 }
 
 .footer {
-  background-color: #1A1A1B;
+  background-color: #1a1a1b;
   color: white;
   text-align: center;
   padding: 20px;
@@ -102,13 +111,14 @@ body {
     padding: 10px;
   }
 
-  .principal-content, 
+  .principal-content,
   .secundary-content-container {
     width: 100%; /* Ocupa a largura total da tela */
   }
 
-  .top-header, .nav-bar {
+  .top-header,
+  .nav-bar {
     height: auto; /* Ajusta a altura conforme o conteúdo no mobile */
-    padding: 15px;
+    padding: 10px;
   }
 }

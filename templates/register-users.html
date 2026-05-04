@@ -1,0 +1,18 @@
+{% extends 'layout.html' %} {% block title %}Página Inicial - Projeto IFCE{%
+endblock %} {% block content %}
+<div class="principal-content">
+  <!-- O formulário será injetado bem aqui -->
+  {% include 'components/form-register-user.html' %}
+</div>
+
+<div class="secundary-content-container">
+  <div class="secundary-content">
+    <h2>Conteúdo Lateral</h2>
+    <p>Aqui você pode colocar avisos ou links.</p>
+  </div>
+  <div class="tertiary-content">
+    <h2>Informações Extras</h2>
+    <p>Outros dados importantes do IFCE.</p>
+  </div>
+</div>
+{% endblock %}

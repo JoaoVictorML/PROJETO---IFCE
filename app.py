@@ -1,11 +1,18 @@
 from flask import Flask
-# 1. Importar o Blueprint que você criou lá no views.py
-from routes.views import views_bp 
+from extensions import db  # Importa o db neutro
+from routes.views import views_bp
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# 2. Registrar o Blueprint (conectar os fios)
+# Inicializa o banco com o app
+db.init_app(app)
+
 app.register_blueprint(views_bp)
+
+with app.app_context():
+    db.create_all()
 
 if __name__ == "__main__":
     app.run(debug=True)
