@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Início - Painel Principal{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+    <div class="container-fluid py-3">
+        <h1 class="display-5 fw-bold text-dark">Bem-vindo ao Sistema Modular</h1>
+        <p class="col-md-8 fs-5 text-muted">
+            Este projeto foi estruturado utilizando Flask no backend, Jinja2 para a modularidade dos componentes e Bootstrap 5 para um design responsivo e elegante.
+        </p>
+        <a href="/dashboard" class="btn btn-primary btn-lg px-4">Ir para o Dashboard</a>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="text-primary mb-2">
+                    <span class="fs-3">📊</span>
+                </div>
+                <h5 class="card-title fw-bold">Estatísticas</h5>
+                <p class="card-text text-muted">Acompanhe gráficos, métricas e o desempenho geral do sistema em tempo real pelo dashboard.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0">
+                <a href="/dashboard" class="btn btn-sm btn-outline-primary">Visualizar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="text-success mb-2">
+                    <span class="fs-3">⚙️</span>
+                </div>
+                <h5 class="card-title fw-bold">Modularidade</h5>
+                <p class="card-text text-muted">Código limpo e reutilizável. Alterações no cabeçalho ou rodapé replicam instantaneamente.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0">
+                <span class="badge bg-success-subtle text-success border border-success-subtle">Ativo</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="text-warning mb-2">
+                    <span class="fs-3">🚀</span>
+                </div>
+                <h5 class="card-title fw-bold">Responsividade</h5>
+                <p class="card-text text-muted">Interface totalmente adaptável para dispositivos móveis, tablets e computadores.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0">
+                <span class="badge bg-warning-subtle text-warning border border-warning-subtle">Bootstrap 5</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

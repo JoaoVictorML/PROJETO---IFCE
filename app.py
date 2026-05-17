@@ -1,18 +1,19 @@
-from flask import Flask
-from extensions import db  # Importa o db neutro
-from routes.views import views_bp
+from flask import Flask, render_template
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Inicializa o banco com o app
-db.init_app(app)
+# 1. Rota para a Página Inicial (index.html)
+@app.route('/')
+def index():
+    # O Flask vai procurar o arquivo index.html automaticamente dentro da pasta 'templates'
+    return render_template('index.html')
 
-app.register_blueprint(views_bp)
+# 2. Rota para a Página de Cadastro (usuarios/cadastrar.html)
+@app.route('/cadastrar')
+def cadastrar():
+    # Se o arquivo estiver dentro de uma subpasta, basta passar o caminho relativo
+    return render_template('usuarios/cadastrar.html')
 
-with app.app_context():
-    db.create_all()
-
-if __name__ == "__main__":
+# Passo fundamental para rodar o servidor local
+if __name__ == '__main__':
     app.run(debug=True)
